@@ -32,9 +32,6 @@ export class AppController {
         .catch((error) => {
           // Handle the error
           console.error(error);
-        })
-        .finally(async () => {
-          await channel.ack(originalMsg);
         });
     } finally {
       await channel.ack(originalMsg);
